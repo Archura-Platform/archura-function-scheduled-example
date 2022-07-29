@@ -1,2 +1,2 @@
 # archura-function-scheduled-example
-Archura Scheduled Function Example
+Archura Platform Scheduled Function example.
