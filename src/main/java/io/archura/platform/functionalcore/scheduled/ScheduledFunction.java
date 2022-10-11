@@ -1,14 +1,12 @@
 package io.archura.platform.functionalcore.scheduled;
 
 import io.archura.platform.api.context.Context;
-import io.archura.platform.api.type.Configurable;
 import io.archura.platform.api.logger.Logger;
+import io.archura.platform.api.type.Configurable;
 import io.archura.platform.api.type.functionalcore.ContextConsumer;
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-@Component
 public class ScheduledFunction implements ContextConsumer, Configurable {
 
     private Map<String, Object> configuration;
@@ -21,7 +19,7 @@ public class ScheduledFunction implements ContextConsumer, Configurable {
     @Override
     public void accept(Context context) {
         final Logger logger = context.getLogger();
-        logger.info("Scheduled function example, configuration: " + configuration);
+        logger.info("Scheduled function example, isVirtual: %s, configuration: %s, hash: %s", Thread.currentThread().isVirtual(), configuration, this.hashCode());
     }
 
 }
