@@ -209,6 +209,8 @@ docker/package.json
 # Editors
 ######################
 .vscode
+.fleet
+.fleet/*
 *.suo
 *.ntvs*
 *.njsproj
